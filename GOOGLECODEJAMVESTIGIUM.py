@@ -1,5 +1,7 @@
 #Google_Code_Jam_2020_Vestigium
-#https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020993c
+
+#Try it online https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/000000000020993c
+
 #Problem
 #Vestigium means "trace" in Latin. In this problem we work with Latin squares and matrix traces.
 #The trace of a square matrix is the sum of the values on the main diagonal (which runs from the upper left to the lower right).
