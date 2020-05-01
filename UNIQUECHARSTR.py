@@ -1,4 +1,7 @@
 #Unique Characters From A String
+
+#Try it online https://code.sololearn.com/czg43ejOGCr7
+
 #When Input String is Sorted
 instring="abbbccdefghhhijkllmmnnoopqrstuvxyzz"
 inlength = len(instring) - 1
