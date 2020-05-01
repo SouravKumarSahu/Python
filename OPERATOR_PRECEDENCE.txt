@@ -1,0 +1,23 @@
+# Highest precedence at top, lowest at bottom.
+# Operators in the same row evaluate left to right.
+
+Priority			Operators									Description
+
+1			(expressions...),[expressions...], {key: value...}, {expressions...}	Binding or parenthesized expression, list display, dictionary display, set display
+2			x[index], x[index:index], x(arguments...), x.attribute			Subscription, slicing, call, attribute reference
+3			await x									Await expression
+4			**									Exponentiation
+5			+x, -x, ~x								Positive, negative, bitwise NOT
+6			*, @, /, //, %								Multiplication, matrix multiplication, division, floor division, remainder
+5			+, -									Addition and subtraction
+6			<<, >>									Shifts
+7			&									Bitwise AND
+8			^									Bitwise XOR
+9			|									Bitwise OR
+10			in, not in, is, is not, <, <=, >, >=, !=, ==				Comparisons, including membership tests and identity tests
+11			not x									Boolean NOT
+12			and									Boolean AND
+13			or									Boolean OR
+14			if – else								Conditional expression
+15			lambda									Lambda expression
+16			:=									Assignment expression
