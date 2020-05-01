@@ -1,6 +1,6 @@
 #Unique Characters From A String
 
-#Try it online https://code.sololearn.com/czg43ejOGCr7
+#Try it online https://code.sololearn.com/c2Iq3ceG4IZB
 
 #When Input String is Sorted
 instring="abbbccdefghhhijkllmmnnoopqrstuvxyzz"
