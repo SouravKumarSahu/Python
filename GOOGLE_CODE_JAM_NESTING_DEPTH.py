@@ -1,6 +1,7 @@
 #Google_Code_Jam_2020_Nesting_Depth
-#https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9f
-#
+
+#Try it online https://codingcompetitions.withgoogle.com/codejam/round/000000000019fd27/0000000000209a9f
+
 #Problem
 #tl;dr: Given a string of digits S, insert a minimum number of opening and closing parentheses into it such that the resulting string is balanced and each digit d is inside exactly d pairs of matching parentheses.
 #Let the nesting of two parentheses within a string be the substring that occurs strictly between them. An opening parenthesis and a closing parenthesis that is further to its right are said to match if their nesting is empty, or if every parenthesis in their nesting matches with another parenthesis in their nesting. The nesting depth of a position p is the number of pairs of matching parentheses m such that p is included in the nesting of m.
