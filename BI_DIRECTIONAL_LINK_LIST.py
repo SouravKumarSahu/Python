@@ -43,21 +43,27 @@ class LinkList():
         self.node_count += 1
 
     def search_node(self,data):
+        del_count = 0
         curr_node = self.last_node
         for i in range(self.node_count):
             if curr_node.get_data() == data:
-                print(f'Found at node number {self.node_count - i}')
+                del_count += 1
+                print(f'Found note at position {self.node_count - i}')
                 return curr_node
             curr_node = curr_node.get_pre()
+        if not del_count:
+            print('Node not found')
+            return None
 
     def delete_node(self,data):
         curr_node = self.search_node(data)
-        pre_node = curr_node.get_pre()
-        nxt_node = curr_node.get_nxt()
-        pre_node.set_nxt(nxt_node)
-        nxt_node.set_pre(pre_node)
-        del curr_node
-        self.node_count -= 1
+        if curr_node:
+            pre_node = curr_node.get_pre()
+            nxt_node = curr_node.get_nxt()
+            pre_node.set_nxt(nxt_node)
+            nxt_node.set_pre(pre_node)
+            del curr_node
+            self.node_count -= 1
 
     def __str__(self):
         node_list = [hex(id(node)) for node in self.list_node()]
@@ -116,3 +122,6 @@ print(f'\nLength of link list LL1 after delete = {len(LL1)}')
 print("\nBelow are individual data using __str__() method")
 for node in LL1.list_node():
     print(node,end=' ')
+
+print('\n\nDelete invalid node')
+LL1.delete_node('Sam')
