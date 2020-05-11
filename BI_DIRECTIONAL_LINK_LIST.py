@@ -46,7 +46,7 @@ class LinkList():
         curr_node = self.last_node
         for i in range(self.node_count):
             if curr_node.get_data() == data:
-                print(f'Found the node {curr_node}')
+                print(f'Found at node number {self.node_count - i}')
                 return curr_node
             curr_node = curr_node.get_pre()
 
@@ -57,10 +57,14 @@ class LinkList():
         pre_node.set_nxt(nxt_node)
         nxt_node.set_pre(pre_node)
         del curr_node
+        self.node_count -= 1
 
     def __str__(self):
         node_list = [hex(id(node)) for node in self.list_node()]
         return str(node_list)
+
+    def __len__(self):
+        return self.node_count
 
     def list_node(self):
         curr_node = self.last_node
@@ -85,6 +89,8 @@ LL1.add_node('Bhue')
 
 print(f'Print link list LL1 = {LL1}')
 
+print(f'\nLength of link list LL1 = {len(LL1)}')
+
 print('\nBelow are individual data using get_data() method')
 for node in LL1.list_node():
     print(node.get_data(),end=' ')
@@ -104,6 +110,8 @@ print(f'\nNext node of the Searched node = {node.get_nxt()}')
         
 print('\nDeleting node Sahu')
 LL1.delete_node('Sahu')
+
+print(f'\nLength of link list LL1 after delete = {len(LL1)}')
 
 print("\nBelow are individual data using __str__() method")
 for node in LL1.list_node():
