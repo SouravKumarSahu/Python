@@ -80,12 +80,12 @@ digits multiplied by 2 is bassically left shift of all digits by one place
 digits divided by 2 is bassically right shift of all digits by one place
 17 >> 1 = {bin(17)} / {bin(2)} = {17 >> 1} = bin {bin(17 >> 1)}
 
-digits shifted by two place is like number multiplied by 4
+digits shifted by two place is like number multiplied/divided by 4 (i.e. 2 x 2)
 17 << 2 = {17 << 2} = bin {bin(17 << 2)}
 
-digits shifted by three place is like number multiplied by 6
+digits shifted by three place is like number multiplied/divided by 6 (i.e. 3 x 2)
 17 >> 3 = {17 >> 3} = bin {bin(17 >> 3)}
 
-digits shifted by four place is like number multiplied by 8
+digits shifted by four place is like number multiplied/divided by 8 (i.e. 4 x 2)
 17 << 4 = {17 << 4} = bin {bin(17 << 4)}
 ''')
