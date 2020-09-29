@@ -6,7 +6,7 @@ class Apple:
         
 class Package:
     total_no_of_apples = 0
-    max_weight_per_pack = 50
+    max_weight_per_pack = 300
     
     def __init__(self,pack_num):
         self.pack_num = pack_num
@@ -27,8 +27,11 @@ package_full = True
 
 conatiner = []
 
-for i in range(1,1000):
+i = 0
+
+while Package.total_no_of_apples <= 1000 :
     if package_full:
+        i += 1
         new_package = Package(f"package_{i}")
         conatiner.append(new_package)
         package_full = False
@@ -39,6 +42,3 @@ print(f"Number of packages {len(conatiner)} with total apples {Package.total_no_
 
 for x in conatiner:
     print(f"Package: {x.pack_num} contains {x.apples_in_this_pack} apples and weigh around {x.weight_of_this_pack}")
-        
-        
-        
